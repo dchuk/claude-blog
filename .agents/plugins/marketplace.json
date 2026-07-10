@@ -1,0 +1,20 @@
+{
+  "name": "dchuk-claude-blog",
+  "interface": {
+    "displayName": "Claude Blog Universal"
+  },
+  "plugins": [
+    {
+      "name": "claude-blog",
+      "source": {
+        "source": "local",
+        "path": "./plugins/claude-blog"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

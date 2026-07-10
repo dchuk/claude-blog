@@ -2,7 +2,7 @@
   <img src="assets/banner.svg" alt="Claude Blog: AI Blog Writing and SEO Optimization Skill for Claude Code. Animated terminal-style banner with pixel-art CLAUDE BLOG wordmark, breathing orange gradient, scanning command palette, and pulsing status indicators" width="100%">
 </p>
 
-# AI Blog Writing & SEO Optimization Skill for Claude Code (`claude-blog`)
+# AI Blog Writing & SEO Optimization for Claude Code and OpenAI Codex (`claude-blog`)
 
 <p align="center">
   <a href="https://agentskills.io"><img src="https://img.shields.io/badge/Agent%20Skills-Compatible-blue" alt="Agent Skill"></a>
@@ -32,7 +32,7 @@
 
 > **Blog:** [See how claude-blog works](https://agricidaniel.com/blog/claude-code-blog-writer)
 
-**claude-blog is a Claude Code skill suite that writes, optimizes, and audits blog content at scale.** Every article is dual-optimized for Google rankings (December 2025 Core Update, E-E-A-T) and AI citation platforms (ChatGPT, Perplexity, AI Overviews). A v1.9.0 5-gate Delivery Contract scores every draft against a 100-point rubric and blocks anything below 90 from reaching you.
+**claude-blog is a shared Claude Code and OpenAI Codex skill suite that writes, optimizes, and audits blog content at scale.** Both clients load the same content workflows and specialist prompts. Every article is dual-optimized for Google rankings and AI citation platforms.
 
 ## Key takeaways
 
@@ -117,18 +117,29 @@ Alongside the `.md`, the contract also produces: rendered `.html` (XSS-safe JSON
 
 > ℹ️ **Which version are you installing?**
 >
-> - **Not an AI Marketing Hub Pro member?** Install from the public repo: [`AgriciDaniel/claude-blog`](https://github.com/AgriciDaniel/claude-blog). All the install commands below work there. Just swap `AI-Marketing-Hub/claude-blog` for `AgriciDaniel/claude-blog` and the plugin slug `claude-blog@ai-marketing-hub-claude-blog` for `claude-blog@agricidaniel-claude-blog`. Public releases ship there; this private mirror runs ahead.
-> - **Pro member?** The commands below install the **community version** with early access to in-development features. They require an authenticated `gh auth login` (or GitHub PAT) session with access to the `AI-Marketing-Hub` org. If `/plugin marketplace add` fails with a 404, your account is not in the org yet. DM in the [Skool community](https://www.skool.com/ai-marketing-hub-pro) to get added.
+> - **Universal public fork (default here).** The commands below install from [`dchuk/claude-blog`](https://github.com/dchuk/claude-blog), which tracks the MIT upstream and adds native Codex packaging.
+> - **Upstream-only Claude distribution.** Use [`AgriciDaniel/claude-blog`](https://github.com/AgriciDaniel/claude-blog) if you do not need the Codex compatibility layer.
 
 **Plugin Install (Claude Code 1.0.33+):**
 
 ```bash
 # Add marketplace (one-time)
-/plugin marketplace add AI-Marketing-Hub/claude-blog
+/plugin marketplace add dchuk/claude-blog
 
 # Install plugin
-/plugin install claude-blog@ai-marketing-hub-claude-blog
+/plugin install claude-blog@dchuk-claude-blog
 ```
+
+**Plugin Install (OpenAI Codex):**
+
+```bash
+codex plugin marketplace add dchuk/claude-blog
+codex plugin add claude-blog@dchuk-claude-blog
+```
+
+Start a new Codex task and ask `$claude-blog:blog` to set up its specialist
+agents for the current project. Codex uses `$claude-blog:blog` and
+natural-language requests instead of Claude Code's `/blog` slash command.
 
 **Recommended: clone, verify, then install** (lets you inspect `install.sh` and pin a release tag):
 

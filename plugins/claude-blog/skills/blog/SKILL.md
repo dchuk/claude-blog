@@ -11,9 +11,10 @@ description: >
   11ty, Gatsby, HTML). Use when user says "blog", "write a blog", "blog post",
   "blog strategy", "content brief", "editorial calendar", "blog audit",
   "blog optimization", "topic cluster", "multilingual blog", "FLOW framework",
-  or any /blog subcommand. Sub-skill descriptions cover narrower triggers.
+  "set up blog agents in Codex", or any /blog subcommand. Sub-skill descriptions
+  cover narrower triggers.
 license: MIT
-compatibility: Requires Claude Code and Python 3.11+ for quality scoring
+compatibility: Requires Claude Code or OpenAI Codex and Python 3.11+ for quality scoring
 metadata:
   author: AgriciDaniel
   version: "1.9.1"
@@ -27,6 +28,20 @@ Full-lifecycle blog management: strategy, briefs, outlines, writing, analysis,
 optimization, schema generation, repurposing, and editorial planning. Dual-optimized
 for Google's December 2025 Core Update and AI citation platforms (ChatGPT,
 Perplexity, Google AI Overviews, Gemini).
+
+## Codex agent setup
+
+When the user asks to set up or refresh Claude Blog agents in Codex, resolve this
+`SKILL.md` to an absolute path and run the plugin-root installer located two
+directories above it:
+
+```bash
+python3 <absolute-plugin-root>/scripts/install_codex_agents.py --project-root "$(git rev-parse --show-toplevel)" --json
+```
+
+Report the five generated agent names and tell the user to start a new Codex task
+so project custom-agent discovery refreshes. The installer updates only files it
+generated previously and refuses to replace an unmanaged collision.
 
 ## Quick Reference
 

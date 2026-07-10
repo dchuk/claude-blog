@@ -1,7 +1,7 @@
 {
-  "name": "agricidaniel-blog",
+  "name": "dchuk-claude-blog",
   "owner": {
-    "name": "AgriciDaniel"
+    "name": "AgriciDaniel; universal port maintained by dchuk"
   },
   "metadata": {
     "description": "Blog creation and optimization tools for Claude Code"

@@ -1,0 +1,29 @@
+{
+  "name": "claude-blog",
+  "version": "1.9.1-universal.4",
+  "description": "Universal blogging plugin with shared Agent Skills and specialist agents for Claude Code and OpenAI Codex.",
+  "author": {
+    "name": "AgriciDaniel",
+    "email": "agricidaniel@gmail.com",
+    "url": "https://github.com/AgriciDaniel"
+  },
+  "homepage": "https://github.com/dchuk/claude-blog",
+  "repository": "https://github.com/dchuk/claude-blog",
+  "license": "MIT",
+  "keywords": ["blogging", "content", "seo", "agent-skills", "claude-code", "codex"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Claude Blog",
+    "shortDescription": "Research, write, optimize, and maintain blog content.",
+    "longDescription": "Plan, research, draft, optimize, illustrate, refresh, and analyze blog content with shared Agent Skills and specialist roles.",
+    "developerName": "AgriciDaniel; Codex port maintained by dchuk",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write", "Web search", "External APIs"],
+    "websiteURL": "https://github.com/dchuk/claude-blog",
+    "defaultPrompt": [
+      "Research and draft a high-quality blog post.",
+      "Optimize this article for search and reader value.",
+      "Audit this blog and propose the highest-impact improvements."
+    ]
+  }
+}
