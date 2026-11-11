@@ -97,3 +97,22 @@ README) carries an HTML-comment header crediting Daniel Agrici / FLOW / CC BY 4.
 For details on how each adaptation maps source to target, including the exact
 methodology elements adopted and the rationale for non-ported elements, see
 CONTRIBUTORS.md in the root of this repository.
+
+================================================================================
+
+seo-skills (commit 3bf48be44675c5595e082f47bf162c4280ca0bbf)
+Copyright (c) Ilias Ism
+Licensed under the MIT License
+Source: https://github.com/Illyism/seo-skills
+
+The following skills are adapted from seo-skills. Each was rewritten for this
+plugin's routing, project contracts, and prose rules; the methodology is
+retained and attributed in each file.
+
+- seo/seo-title-optimization/SKILL.md  ->  skills/blog-titles/SKILL.md
+- content/intro/SKILL.md               ->  skills/blog-intro/SKILL.md
+- seo/blitz-seo/SKILL.md               ->  skills/blog-sprint/SKILL.md
+- marketing/customer-journey/SKILL.md  ->  skills/blog-journey/SKILL.md
+- seo/blog-refresher/SKILL.md          ->  skills/blog/references/serp-gap-analysis.md
+
+MIT License text: https://github.com/Illyism/seo-skills#license

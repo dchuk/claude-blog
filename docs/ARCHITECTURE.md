@@ -153,7 +153,7 @@ name, description, and available tools.
 **Location**: `skills/blog/references/*.md`
 
 Knowledge documents loaded on demand (RAG-style; not preloaded into context).
-21 references in `skills/blog/references/` cover SEO landscape, GEO/AEO,
+22 references in `skills/blog/references/` cover SEO landscape, GEO/AEO,
 content rules, visual media, schema, E-E-A-T, platform guides, distribution,
 internal linking, FLOW prompts, video embeds, AI-slop detection, editorial
 heuristics, cognitive load, research quality, synthesis contract, and the
@@ -489,7 +489,7 @@ After installation, `claude-blog` occupies this structure inside `~/.claude/`:
 
 **Component counts (v1.9.0)**: 1 orchestrator + 29 sub-skills = 30 skill dirs
 total, 5 agents (blog-researcher, blog-writer, blog-seo, blog-reviewer,
-blog-translator), 21 references in `skills/blog/references/` (plus per-sub-skill
+blog-translator), 22 references in `skills/blog/references/` (plus per-sub-skill
 references and 30 synced FLOW prompts under `skills/blog-flow/references/`),
 12 content templates, 9 root-level scripts (`scripts/analyze_blog.py`,
 `blog_preflight.py`, `blog_render.py`, `cognitive_load.py`,

@@ -109,6 +109,9 @@ Wait for user approval before proceeding.
 ### Phase 2: Research
 
 1. **Identify the blog's core topic** from existing content
+   - When the post has lost rankings or sits behind stronger pages, run the
+     SERP gap method in `skills/blog/references/serp-gap-analysis.md` and
+     present its gap table before Phase 4.
 2. **Find replacement statistics** for any fabricated/unsourced data:
    - Search: `[topic] study 2025 2026 data statistics`
    - Target tier 1-3 sources only

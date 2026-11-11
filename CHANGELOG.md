@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-_No unreleased changes._
+### Added (universal.5)
+
+- `blog-titles`, `blog-intro`, `blog-sprint`, and `blog-journey` sub-skills,
+  adapted from Illyism/seo-skills (MIT) at commit `3bf48be`.
+- `skills/blog/references/serp-gap-analysis.md`, adapted from that repo's
+  `blog-refresher`. `blog-rewrite` Phase 2 now cites it.
+- Orchestrator routes and `docs/COMMANDS.md` rows for the four new commands.
 
 ## [1.9.1] - 2026-05-18
 

@@ -1,6 +1,6 @@
 {
   "name": "claude-blog",
-  "description": "Universal blog creation and optimization suite for Claude Code and OpenAI Codex, with 30 shared content skills and 5 specialist agents for research, writing, SEO, review, and translation.",
+  "description": "Universal blog creation and optimization suite for Claude Code and OpenAI Codex, with 34 shared content skills and 5 specialist agents for research, writing, SEO, review, and translation.",
   "version": "1.9.1",
   "author": {
     "name": "AgriciDaniel",
