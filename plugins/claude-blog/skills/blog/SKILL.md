@@ -76,6 +76,10 @@ generated previously and refuses to replace an unmanaged collision.
 | `/blog localize <file> --locale <code>` | Cultural deep-adaptation (DACH, FR, ES, JA, custom) |
 | `/blog locale-audit <directory>` | Multilingual content QA (completeness, hreflang, parity, freshness) |
 | `/blog flow [find\|optimize\|win\|prompts\|sync]` | FLOW framework prompts (evidence-led, 30 blog-applicable) |
+| `/blog titles [file-or-dir]` | CTR-driven title and meta rewrites from GSC and live SERP evidence |
+| `/blog intro <file>` | Intent-matched opening paragraph for a post |
+| `/blog sprint [url-or-file]` | 30-day focus sprint to push one money page onto page 1 |
+| `/blog journey <niche>` | Five-stage reader map with search queries and AI prompts per stage |
 
 ## Orchestration Logic
 
@@ -113,6 +117,10 @@ generated previously and refuses to replace an unmanaged collision.
    - `localize` / `cultural-adaptation` → `blog-localize` (cultural deep-adaptation)
    - `locale-audit` / `translation-audit` → `blog-locale-audit` (multilingual QA)
    - `flow` / `find-leverage-optimize-win` → `blog-flow` (FLOW framework prompts)
+   - `titles` / `ctr` / `serp-titles` → `blog-titles` (CTR-driven title rewrites)
+   - `intro` / `lead` / `hook` → `blog-intro` (intent-matched openings)
+   - `sprint` / `blitz` → `blog-sprint` (one-page focus sprint)
+   - `journey` / `awareness` / `buyer-journey` → `blog-journey` (five-stage reader map)
 
 ### Platform Detection
 
@@ -241,7 +249,7 @@ Blog quality is scored across 5 categories (100 points total):
 
 ## Reference Files
 
-Load on-demand as needed (21 references; 13 original + 5 v1.8.0 methodology + 2 supplemental + 1 v1.9.0 delivery contract):
+Load on-demand as needed (22 references; 13 original + 5 v1.8.0 methodology + 2 supplemental + 1 v1.9.0 delivery contract + 1 SERP gap method):
 
 - `references/google-landscape-2026.md`: December 2025 Core Update, E-E-A-T, algorithm changes
 - `references/geo-optimization.md`: GEO/AEO techniques, AI citation factors
@@ -264,6 +272,7 @@ Load on-demand as needed (21 references; 13 original + 5 v1.8.0 methodology + 2 
 - `references/research-quality.md`: 5-dim research rubric, pre-flight trap classes, cross-source clustering, freshness floors (v1.8.0)
 - `references/synthesis-contract.md`: 6 LAWs for research-synthesis output (v1.8.0)
 - `references/blog-delivery-contract.md`: 5-gate enforcement between content generation and user delivery (v1.9.0)
+- `references/serp-gap-analysis.md`: baseline, top-5 competitor audit, and prioritized gap table for refreshes and sprints (adapted from Illyism/seo-skills)
 
 ## Content Templates
 
@@ -319,8 +328,12 @@ Templates are in `templates/` and contain section structure, markers, and checkl
 | `blog-translate` | SEO-optimized translation with format preservation (markdown, MDX, frontmatter, schema) (v1.7.0) |
 | `blog-localize` | Cultural deep-adaptation per locale (DACH, FR, ES, JA, custom) (v1.7.0) |
 | `blog-locale-audit` | Multilingual content QA (completeness, hreflang, parity, freshness) (v1.7.0) |
+| `blog-titles` | CTR-driven title and meta rewrites with an approval table (adapted from Illyism/seo-skills) |
+| `blog-intro` | Intent-matched opening paragraphs by page type (adapted from Illyism/seo-skills) |
+| `blog-sprint` | One-page 30-day focus sprint with front-loaded changes (adapted from Illyism/seo-skills) |
+| `blog-journey` | Five-stage reader map with search queries and AI prompts (adapted from Illyism/seo-skills) |
 
-Total: 30 sub-skill directories on disk (29 listed above plus this orchestrator `blog/`). 28 are user-facing slash commands; `blog-chart` is internal-only and `blog-image` is also callable internally by `blog-write` and `blog-rewrite`.
+Total: 34 sub-skill directories on disk (33 listed above plus this orchestrator `blog/`). 32 are user-facing slash commands; `blog-chart` is internal-only and `blog-image` is also callable internally by `blog-write` and `blog-rewrite`.
 
 ## Agents
 

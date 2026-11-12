@@ -48,6 +48,10 @@ Every command is invoked through the main orchestrator
 | `brand [init\|show\|update]` | blog-brand | Generate BRAND.md + VOICE.md context auto-loaded by all sub-skills (v1.8.0) |
 | `discourse <topic>` | blog-discourse | API-free last-30-days discourse research; produces DISCOURSE.md (v1.8.0) |
 | `update <file>` | blog-rewrite | Freshness update (alias for rewrite) |
+| `titles [file-or-dir]` | blog-titles | CTR-driven title and meta rewrites from GSC and live SERP evidence |
+| `intro <file>` | blog-intro | Intent-matched opening paragraph for a post |
+| `sprint [url-or-file]` | blog-sprint | 30-day focus sprint to push one money page onto page 1 |
+| `journey <niche>` | blog-journey | Five-stage reader map with search queries and AI prompts |
 
 ---
 

@@ -1,6 +1,6 @@
 {
   "name": "claude-blog",
-  "version": "1.9.1-universal.4",
+  "version": "1.9.1-universal.5",
   "description": "Universal blogging plugin with shared Agent Skills and specialist agents for Claude Code and OpenAI Codex.",
   "author": {
     "name": "AgriciDaniel",
