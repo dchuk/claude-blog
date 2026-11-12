@@ -28,9 +28,23 @@ def _read_pyproject_version() -> str | None:
     return m.group(1) if m else None
 
 
-def _read_plugin_version() -> str | None:
-    with open(ROOT / ".claude-plugin" / "plugin.json", encoding="utf-8") as f:
+_UNIVERSAL_SUFFIX = re.compile(r"-universal\.\d+$")
+
+
+def _read_manifest_version(path: Path) -> str | None:
+    with open(path, encoding="utf-8") as f:
         return json.load(f).get("version")
+
+
+def _read_plugin_version() -> str | None:
+    """Base version of the Claude manifest.
+
+    The universal fork publishes `<upstream>-universal.N` in both plugin
+    manifests so Claude Code and Codex see each fork release as an update.
+    pyproject.toml cannot carry that suffix (PEP 440), so compare the base.
+    """
+    version = _read_manifest_version(ROOT / ".claude-plugin" / "plugin.json")
+    return _UNIVERSAL_SUFFIX.sub("", version) if version else None
 
 
 def _read_citation_version() -> str | None:
@@ -111,6 +125,16 @@ def test_all_sub_skill_versions_match_project_version() -> None:
         f"({target}):\n"
         + "\n".join(f"  {p}: {v}" for p, v in mismatches)
     )
+
+
+def test_claude_and_codex_manifests_share_release_version() -> None:
+    """Both plugin manifests carry the same full release version, so a
+    fork release that reaches Codex also reaches Claude Code."""
+    claude = _read_manifest_version(ROOT / ".claude-plugin" / "plugin.json")
+    codex = _read_manifest_version(
+        ROOT / "plugins" / "claude-blog" / ".codex-plugin" / "plugin.json"
+    )
+    assert claude == codex, f"Claude manifest {claude!r} != Codex manifest {codex!r}"
 
 
 if __name__ == "__main__":
